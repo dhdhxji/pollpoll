@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Poll Poll</title>
+    <meta charset="UTF-8">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- My css -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <script src="../js/jquery-3.5.0.js"></script>
+    <script src="../js/menubar_anim.js"></script>
+
+    <nav class="menubar navbar">
+        <div>
+            <a class="menu_entry nav-item" href="index.html">PollPoll</a>
+            <div>
+                <a class="menu_entry nav-item" id="test" href="#">Про нас</a>
+                <a class="menu_entry hidden nav-item" href="contacts.html">Контакти</a>
+                <a class="menu_entry hidden nav-item" href="about.html">Де нас знайти</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="description">
+        <p class="text-center text-break">PollPoll - довірте нам Ваші голосування!</p>   
+    </div>
+
+    <div class="subsection_title">
+        Популярні голосування
+    </div>
+
+    <div class="popular_polls container-fluid col-12">
+        <div class="row flex-nowrap col-12 align-bottom">
+            <div class="poll_element col-lg-4 col-md-6 col-sm-12 text-wrap">    
+                <h3 class="text-center">Ваше ставлення до голосувань</h3>
+                <div class="poll_choises">
+                    <input type="radio" name="choise">Позитивно<br>
+                    <input type="radio" name="choise">Негативно<br>
+                    <input type="radio" name="choise">Дуже позитивно<br>
+                    <input type="radio" name="choise">Дуже негативно<br>
+                    <input type="radio" name="choise">Відношусь<br>
+                    <input type="radio" name="choise">Не відношусь<br>
+                    <input type="radio" name="choise">Абсолютно<br>
+                    <input type="radio" name="choise">Про що мова, ти хто!?<br>
+                </div>
+
+                <input type="submit" value="Відправити"><br>
+            </div>
+    
+            <div class="poll_element col-lg-4 col-md-6 col-sm-12 text-wrap">
+                <h3 class="text-center">Ваше ставлення до голосувань</h3>
+                <div class="poll_choises">
+                    <input type="radio" name="choise">Позитивно<br>
+                    <input type="radio" name="choise">Негативно<br>
+                    <input type="radio" name="choise">Дуже позитивно<br>
+                    <input type="radio" name="choise">Дуже негативно<br>
+                    <input type="radio" name="choise">Відношусь<br>
+                    <input type="radio" name="choise">Не відношусь<br>
+                    <input type="radio" name="choise">Абсолютно<br>
+                    <input type="radio" name="choise">Про що мова, ти хто!?<br>
+                </div>
+                 
+                <input type="submit" value="Відправити"><br>
+            </div>
+    
+            <div class="poll_element align-bottom col-lg-4 col-md-6 col-sm-12 text-wrap">
+                <h3 class="text-center">Тестове голосування</h3>
+                <div class="poll_choises">
+                    <input type="radio" name="choise">Тестова кнопка 1<br>
+                    <input type="radio" name="choise">Тестова кнопка 2<br>
+                    <input type="radio" name="choise">Тестова кнопка 3<br>
+                </div>
+
+                <input type="submit" value="Відправити"><br>
+            </div>
+
+            
+        </div>     
+    </div>
+</body>
