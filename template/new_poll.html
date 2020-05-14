@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Poll Poll</title>
+    <meta charset="UTF-8">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- My css -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class>
+    <script src="../js/jquery-3.5.0.js"></script>
+    <script src="../js/menubar_anim.js"></script>
+
+    <nav class="menubar navbar">
+        <div>
+            <a class="menu_entry nav-item" href="index.html">PollPoll</a>
+            <div>
+                <a class="menu_entry nav-item" id="test" href="#">Про нас</a>
+                <a class="menu_entry hidden nav-item" href="contacts.html">Контакти</a>
+                <a class="menu_entry hidden nav-item" href="about.html">Де нас знайти</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content offset-1 col-10 justify-content-center">
+        <div class="subsection_title">
+            Створити нове голосування
+        </div>
+
+        <div class="subsection text-left">
+            <form class action="#">
+                <script src="../js/add_choise_menu.js"></script>
+                
+                <div class="row" style="margin-bottom: 20px;">
+                    <label class="col-4" for="poll_title"><b>Заголовок</b></label>
+                    <input class="col-8" type="text" id="poll_title" name="poll_title">  
+                </div>
+
+                <div class="new_poll_choises">
+                    <div class="new_poll_choise row" style="margin-bottom: 10px">
+                        <label class="col-4" for="lname">Варіант відповіді 1 :</label>
+                        <input class="col-8" type="text" id="poll_choise_1" name="poll_choise_1">
+                    </div>
+                </div>
+                
+                <input id="add_choise" type="button" value="Додати варіант">
+                <input type="submit" value="Відправити!">
+            </form>
+        </div>
+    </div>
+
+
+
+</body>

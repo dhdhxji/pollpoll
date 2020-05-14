@@ -3,6 +3,8 @@ body{
     padding: 0px;
 
     line-height: normal;
+
+    background-color: #f1f1f1;
 }
 
 .menubar {
@@ -50,6 +52,11 @@ a.menu_entry:hover {
 
     padding-top: 250px;
     padding-bottom: 250px;
+}
+
+.content{
+    margin-top: 35px;
+    background-color: white;
 }
 
 
