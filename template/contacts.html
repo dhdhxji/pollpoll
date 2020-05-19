@@ -3,7 +3,12 @@
 <head>
     <title>Poll Poll</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styles.css">
+    
+     <!-- Bootstrap css -->
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+     <!-- My css -->
+     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
@@ -11,15 +16,45 @@
     
     {navbar}
 
-    <div class="subsection">
-        <div class="data_segment">
-            <div class="subsection_title">
-                З нами можна з'єднатися наступним чином:
+    <div class="col-10 offset-1">
+        <div class="row content p-5">
+
+            <div class="subsection col-12">
+                <div class="data_segment">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJzdzwMXrdOkcRP468JXDMaZg&key=AIzaSyAhLrbD3OGw88OvCnt62M-TKRF6r5uEVhM" allowfullscreen></iframe>
+                </div>
+                <div class="data_segment">
+                    <div class="subsection_title">
+                        Де нас знайти?
+                    </div>
+                    Тут!=)
+                </div>
             </div>
-            Номер телефону: +38(096)1111111<br>
-            Інший номер телефону: +38(096)1111111<br>
-            e-mail: email@email.email<br>
+
+            <div class="subsection col-12">
+                <div class="data_segment">
+                    <div class="subsection_title">
+                        З нами можна зв'язатися наступним чином:
+                    </div>
+                    Номер телефону: +38(096)1111111<br>
+                    Інший номер телефону: +38(096)1111111<br>
+                    e-mail: email@email.email<br>
+                </div>
+            </div>
+
+            <div class="subsection_title">
+                Точний час у Львові
+            </div>
+
+            <div class="subsection col-12">
+                <a href="https://time.is/Lviv" id="time_is_link" rel="nofollow" style="font-size:36px">Львів:</a>
+                <span id="Lviv_z713" style="font-size:36px"></span>
+                <script src="//widget.time.is/t.js"></script>
+                <script>
+                time_is_widget.init({{Lviv_z713:{{}}}});
+                </script>
+            </div>
+
         </div>
     </div>
-
 </body>

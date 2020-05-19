@@ -30,6 +30,12 @@ get_poll_choises_query = """
 SELECT * FROM POLL.Choises WHERE poll_id={id}
 """
 
+poll_query = """
+UPDATE `POLL`.`Choises`
+SET `percent` = `percent` + 1
+WHERE `id` = {id};
+"""
+
 def get_last_id(cursor):
     cursor.execute("select LAST_INSERT_ID()")
     return cursor.fetchone()['LAST_INSERT_ID()']
@@ -91,7 +97,7 @@ def get_polls():
             cursor.execute(get_poll_choises_query.format(id=poll['id']))
             choises = cursor.fetchall()
 
-            choises = ({'answer':i['answer'], 'percent':i['percent']} for i in choises)
+            choises = ({'answer':i['answer'], 'percent':i['percent'], 'id':i['id']} for i in choises)
             result.append( {'title':poll['title'], 'choises':choises} )
 
 
@@ -120,7 +126,7 @@ def get_poll_by_id(id):
         cursor.execute(get_poll_choises_query.format(id=poll['id']))
         choises = cursor.fetchall()
 
-        choises = ({'answer':i['answer'], 'percent':i['percent']} for i in choises)
+        choises = ({'answer':i['answer'], 'percent':i['percent'], 'id':i['id']} for i in choises)
         result = {'title':poll['title'], 'choises':choises}
 
 
@@ -131,3 +137,19 @@ def get_poll_by_id(id):
         connection.close()
 
     return result
+
+def poll(choise_id):
+    connection = pymysql.connect(host=db_host, user=db_user, password=db_pass, db=db_name,
+                charset="utf8mb4", cursorclass=pymysql.cursors.DictCursor)
+
+    cursor = connection.cursor()
+
+    try:
+        cursor.execute(poll_query.format(id=choise_id))
+        connection.commit()
+
+    except Exception as e:
+        print("Exeception occured:{}".format(e))
+        connection.rollback()
+    finally:
+        connection.close()
